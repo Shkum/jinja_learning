@@ -1,0 +1,8 @@
+{# from 'dialog.html' import dialog_1 as dlg #}
+{% import 'dialog.html' as dlg %}
+{% include 'header.html' %}
+{% include 'tester.html' ignore missing %}
+<p>Page content</p>
+{# dlg('Warning', 'Das ist test dialog')#}
+{{ dlg.dialog_1('Warning', 'Das ist test dialog')}}
+{% include ['footer.html', 'tester.html'] ignore missing %}
